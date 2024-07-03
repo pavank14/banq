@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditi Banquet Hall</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="package.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo1">
+            <img src="25.png" alt="Aditi Banquet Hall Logo">
+        </div>
+        <h1>Aditi Banquet Hall</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calender.html">Booking</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="formContainer" class="containers credentials-container">
+        
+        <form id="credentialsForm" action="booking.php" method="post"  id="bookingForm" onsubmit="return moveToStep2()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="contact">Contact:</label>
+            <input type="text" id="contact" name="contact" required>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            <input type="hidden" id="package" name="package">
+            <button type="submit" name="submitCredentials">Submit</button>
+        </form>
+    </div>
+
+    <div id="bookingContainer" class="container packages-container" style="display: none;">
+        <h2>Select Package</h2>
+        <div class="packages">
+            <div class="package" onclick="showPackageTable('premiumTable', 'Premium')">
+                <h3>Premium</h3>
+                <p>₹1,36,700</p>
+            </div>
+            <div class="package" onclick="showPackageTable('platinumTable', 'Platinum')">
+                <h3>Platinum</h3>
+                <p>₹1,14,200</p>
+            </div>
+            <div class="package" onclick="showPackageTable('standardTable', 'Standard')">
+                <h3>Standard</h3>
+                <p>₹92,900</p>
+            </div>
+            <div class="package customized" onclick="showPackageTable('customizedTable', 'Customized')">
+                <h3>Customized</h3>
+                <p>₹</p>
+            </div>
+        </div>
+
+        <div id="premiumTable" class="package-table-container">
+            <h3>Premium Package</h3>
+            <table class="package-table">
+                <thead>
+                    <tr>
+                        <th>Item No.</th>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Premium package items here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="platinumTable" class="package-table-container">
+            <h3>Platinum Package</h3>
+            <table class="package-table">
+                <thead>
+                    <tr>
+                        <th>Item No.</th>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Platinum package items here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="standardTable" class="package-table-container">
+            <h3>Standard Package</h3>
+            <table class="package-table">
+                <thead>
+                    <tr>
+                        <th>Item No.</th>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Standard package items here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="customizedTable" class="package-table-container">
+            <h3>Customized Package</h3>
+            <table class="package-table">
+                <!-- Add your table content here -->
+            </table>
+        </div>
+<div class="sub">
+        <button  onclick="submitPlan()">Submit Plan</button>
+    </div></div>
+
+    <script>
+
+
+document.getElementById('bookingForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const formData = {
+    selected_date: document.getElementById('selected_date').value,
+    name: document.getElementById('name').value,
+    contact: document.getElementById('contact').value,
+    address: document.getElementById('address').value,
+    package: document.getElementById('package').value,
+  };
+
+  fetch('https://aditimangalkaryalay.000webhostapp.com/booking.php', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: new URLSearchParams(formData).toString(),
+  })
+  .then(response => {
+    if (response.ok) {
+      window.location.href = 'booking.html';
+    } else {
+      return response.text().then(text => { throw new Error(text) });
+    }
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+});
+
+
+
+
+        let selectedPackage = '';
+
+        function moveToStep2() {
+            document.getElementById('formContainer').style.display = 'none';
+            document.getElementById('bookingContainer').style.display = 'block';
+            return false;
+        }
+
+        function showPackageTable(tableId, packageName) {
+            const tables = document.querySelectorAll('.package-table-container');
+            tables.forEach(table => table.style.display = 'none');
+            document.getElementById(tableId).style.display = 'block';
+            selectedPackage = packageName;
+            document.getElementById('package').value = packageName;
+        }
+
+        function submitPlan() {
+            if (selectedPackage) {
+                document.getElementById('credentialsForm').submit();
+                alert('You are successfully registered');
+            } else {
+                alert('Please select a package before submitting.');
+            }
+        }
+    </script>
+    <footer>
+        <div class="contact-info">
+            <div class="person-info">
+                
+                <p>Name: Pankaj Kulkarni </p>
+                <p>Contact: 9604478076</p>
+            </div>
+            <div class="person-info">
+                <p>Name: Sachin Rathod</p>
+                <p>Contact: 9637542299</p>
+            </div>
+        </div>
+        
+        <div class="social-media">
+           
+            <ul>
+                <li><a href="https://www.facebook.com/profile.php?id=61556582100916" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/aditi_banquet_hall?igsh=em1ub3V3ZHZlenhu" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+
+</html>

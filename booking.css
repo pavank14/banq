@@ -1,0 +1,151 @@
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 10px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+   background-color:#094f74;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Additional CSS for background styling */
+.background-image {
+    /* Replace 'your-image.jpg' with the path to your background image */
+    background-image: url('18.png');
+    background-size: 100%; /* Adjust as needed */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* Ensures the background remains fixed while scrolling */
+    background-repeat: no-repeat;
+    color: #fff; /* Adjust text color for better visibility */
+}
+
+/* Rest of your existing CSS code */
+
+
+.booking-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+}
+
+.credentials,
+.booking-options {
+    flex: 1;
+    padding: 20px;
+    border-right: 2px solid #ddd;
+}
+/* Additional styling for improved aesthetics */
+
+.credentials label,
+.booking-options h3,
+.booking-options label {
+    font-weight: bold;
+    color: #333;
+    
+}
+
+.credentials,
+.booking-options {
+    padding: 20px;
+    margin-top: 10px;
+    background-color: #a4ceea;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 500px;
+    margin: 180px;
+    margin-top: 10px;
+    
+   
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+    width:23px;
+}
+
+/* Add responsive styling if needed */
+
+/*.............marrage...................*/
+
+.gallery_1 {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.gallery_1 figure {
+    margin: 10px;
+    text-align: center;
+}
+
+.gallery-photo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-photo:hover {
+    transform: scale(1.1);
+}
+
+.gallery figcaption {
+    margin-top: 10px;
+    color: #555;
+}
+ /* Customize the style as needed */
+ #photo-container {
+    max-width: 1600px;
+    margin-top: -10px;
+    height: 570px;
+    margin-left: 0px;
+    overflow: hidden;
+}
+
+        .carousel-inner img {
+            width: 100%;
+            height: 570px;
+        }
+/*......................contact form...............*/
+
+
+
+/* Apply background styles only to the body with the 'contact-page' class */
+body.contact-page {
+    background-image: url('28.png'); /* Replace '28.png' with the path to your background image */
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Contact Form styling */
+.contact-form {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    margin: 50px auto; /* Center the contact form */
+}
+
+/* ... (Your existing styles) ... */

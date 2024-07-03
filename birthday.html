@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Marriage Gallery - Aditi Banquet Hall</title>
+</head>
+<body>
+    <header>
+        <div class="logo1">
+            <img src="25.png" alt="Aditi Banquet Hall Logo">
+        </div>
+        <h1>Aditi Banquet Hall</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calender.html">Booking</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="contact.html">Contact Us</a></li> <!-- Link to the contact form section -->
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-content">
+        <h1>Birthday Gallery</h1>
+
+        <!-- Gallery Section -->
+        <section class="gallery_1">
+            <!-- Photo 1 -->
+            <figure>
+                <img class="gallery-photo" src="1.jpeg" alt="Marriage Photo 1">
+               
+            </figure>
+
+            <!-- Photo 2 -->
+            <figure>
+                <img class="gallery-photo" src="2.jpeg" alt="Marriage Photo 2">
+               
+            </figure>
+
+            <!-- Photo 3 -->
+            <figure>
+                <img class="gallery-photo" src="3.jpeg" alt="Marriage Photo 3">
+                
+            </figure>
+
+            <!-- Photo 4 -->
+            <figure>
+                <img class="gallery-photo" src="4.jpeg" alt="Marriage Photo 4">
+                
+            </figure>
+
+            <!-- Add more figures for additional photos -->
+            <figure>
+                <img class="gallery-photo" src="5.jpeg" alt="Marriage Photo 1">
+                
+            </figure>
+
+            <!-- Photo 2 -->
+            <figure>
+                <img class="gallery-photo" src="6.jpeg" alt="Marriage Photo 2">
+            
+            </figure>
+
+            <!-- Photo 3 -->
+            <figure>
+                <img class="gallery-photo" src="7.jpeg" alt="Marriage Photo 3">
+                
+            </figure>
+
+            <!-- Photo 4 -->
+            <figure>
+                <img class="gallery-photo" src="8.jpeg" alt="Marriage Photo 4">
+    
+            </figure>
+
+            <!-- Repeat the structure to create more rows of photos -->
+            <figure>
+                <img class="gallery-photo" src="9.jpeg" alt="Marriage Photo 1">
+            
+            </figure>
+
+            <!-- Photo 2 -->
+            <figure>
+                <img class="gallery-photo" src="10.png" alt="Marriage Photo 3">
+        
+            </figure>
+
+            <!-- Photo 3 -->
+            <figure>
+                <img class="gallery-photo" src="11.jpeg" alt="Marriage Photo 3">
+        
+            </figure>
+
+            <!-- Photo 4 -->
+            <figure>
+                <img class="gallery-photo" src="12.jpeg" alt="Marriage Photo 4">
+            </figure>
+        </section>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="contact-info">
+            <div class="person-info">
+                
+                <p>Name: PANKAJ KULKARNI</p>
+                <p>Contact: 9604432376</p>
+            </div>
+            <div class="person-info">
+                <p>Name: SACHIN RATHOD</p>
+                <p>Contact: 9637542299</p>
+            </div>
+        </div>
+        
+        <div class="social-media">
+            <h2>Follow Us</h2>
+            <ul>
+                <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    <style>
+        .enlarged-photo {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .enlarged-photo img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 2px solid #fff;
+            border-radius: 10px;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .arrow.left {
+            left: 10px;
+        }
+
+        .arrow.right {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Your existing HTML code -->
+
+    <div class="enlarged-photo" id="enlargedPhoto">
+        <img src="" alt="Enlarged Photo" id="enlargedImg">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const galleryPhotos = document.querySelectorAll('.gallery-photo');
+            const enlargedPhoto = document.getElementById('enlargedPhoto');
+            const enlargedImg = document.getElementById('enlargedImg');
+
+            galleryPhotos.forEach(photo => {
+                photo.addEventListener('click', function () {
+                    const src = this.getAttribute('src');
+                    enlargedImg.setAttribute('src', src);
+                    enlargedPhoto.style.display = 'flex';
+                });
+            });
+
+            enlargedPhoto.addEventListener('click', function () {
+                enlargedPhoto.style.display = 'none';
+            });
+        });
+    </script>
+<!-- Footer Section -->
+<footer>
+    <div class="contact-info">
+        <div class="person-info">
+            
+            <p>Name: PANKAJ KULKARNI</p>
+            <p>Contact: 9604432376</p>
+        </div>
+        <div class="person-info">
+            <p>Name: SACHIN RATHOD</p>
+            <p>Contact: 9637542299</p>
+        </div>
+    </div>
+    
+    <div class="social-media">
+        <h2>Follow Us</h2>
+        <ul>
+            <li><a href="https://www.facebook.com/profile.php?id=61556582100916" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/aditi_banquet_hall?igsh=em1ub3V3ZHZlenhu" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+    </div>
+</footer>
+    
+</body>
+</html>

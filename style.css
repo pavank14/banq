@@ -1,0 +1,610 @@
+/* 
+
+@media only screen and (max-device-width: 480px) {
+
+    @media  only screen and (max-width: 600px) {
+        form {
+            flex-direction: column;
+        }
+    
+        .credentials,
+        .booking-options {
+            border: none;
+            padding: 20px;
+        }
+    }
+    
+    .booking-options {
+        padding-left: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+    
+    input {
+        padding: 10px;
+        margin-bottom: 16px;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        width:300px;
+    }
+    
+    
+    button {
+        background-color: #333;
+        color: #fff;
+        padding: 12px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    button:hover {
+        background-color: #555;
+    }
+    .logo img {
+        width: 42px;
+        margin-top: 4px;
+        height: 150%;
+    }
+    .h1, h1 {
+        font-size: 2.2rem;
+    }
+    .main-content h1 {
+    opacity: 0;
+    font-size: 34px;
+    animation: 2s ease-in-out 0s 1 normal forwards running fadeIn;
+}
+
+
+
+}  */
+
+
+
+
+
+@media only screen and (max-device-width: 480px)
+{
+
+
+
+    header {
+   
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        
+    }
+    
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 0.92rem;
+    }
+            form {
+            flex-direction: column;
+        }
+        p {
+            margin-top: 0;
+            font-size: 0.99rem;
+            margin-bottom: 1rem;
+        }
+        .credentials,
+        .booking-options {
+            border: none;
+            padding: 20px;
+        }
+
+        .gallery figcaption {
+            margin-top: 10px;
+            font-size: 21px;
+            color: #555;
+        }
+        .left-feature h4, .right-feature h4 {
+            color: #333;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .left-feature ul li, .right-feature ul li {
+            margin-bottom: 8px;
+            font-size: 12px;
+            color: #555;
+        }
+        p {
+            margin-top: 0;
+            font-size: 0.88rem;
+            margin-bottom: 1rem;
+        }
+
+
+
+        .booking-options {
+            padding-left: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        input {
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            width:300px;
+        }
+        
+        
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 12px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        button:hover {
+            background-color: #555;
+        }
+        .logo img {
+            width: 42px;
+            margin-top: 4px;
+            height: 150%;
+        }
+        .h1, h1 {
+            font-size: 2.2rem;
+        }
+        .main-content h1 {
+        opacity: 0;
+        font-size: 34px;
+        animation: 2s ease-in-out 0s 1 normal forwards running fadeIn;
+    }
+
+
+    .booking-options {
+        padding-left: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+    input {
+        padding: 4px;
+        margin-bottom: 16px;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        width: 290px;
+    }
+    .booking-form-container , input{
+     
+        padding: 4px;
+        margin-bottom: 16px;
+        border: 0px solid #ddd;
+        border-radius: 20px;
+        width: 250px;
+    }
+
+    
+    button {
+        background-color: #333;
+        color: #fff;
+        padding: 12px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    button:hover {
+        background-color: #555;
+    }
+    .logo img {
+        width: 42px;
+        margin-top: 4px;
+        height: 150%;
+    }
+    .h1, h1 {
+        font-size: 1.9rem;
+    }
+    .main-content h1 {
+    opacity: 0;
+    font-size: 34px;
+    animation: 2s ease-in-out 0s 1 normal forwards running fadeIn;
+}
+
+
+
+    .main-content h1 {
+        opacity: 0;
+        font-size: 20px;
+        animation: fadeIn 2s ease-in-out forwards;
+    }
+   
+    
+    #photo-container {
+        max-width: 1600px;
+        margin-top: -10px;
+        height: 190px;
+        margin-left: 0px;
+        overflow: hidden;
+    }
+    .carousel-inner img {
+        width: 100%;
+        height: 186PX;
+    }
+    .calendar {
+       
+            color: #fff;
+            margin: 10px auto;
+            background: #04b6e2;
+            margin-left: 9px;
+            padding: 10px 25px 105px 0px;
+            width: 89%;
+            max-width: 560px;
+            height: 306px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 6px rgba(2,2,2,0.2);
+            position: relative;
+    }
+    
+    .logo img {
+    width: 42px;
+    margin-top: -2px;
+    height: 150%;
+    }
+    .logo1 img {
+        width: 42px;
+        margin-top: 18px;
+        height: 150%;
+        margin-left: -6px;
+        }
+
+    /* ................booking container ........... */
+    .booking-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 12vh; /* Adjusted height to center at the top */
+    }
+    .booking-container {
+        width: 80%;
+        margin-left: 47px;
+        height: 68px;
+    }
+    .step {
+        display: flex;
+        align-items: center;
+    }
+    
+    .circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #333;
+        color: #fff;
+     
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+    }
+    
+    .line {
+        height: 2px;
+        background-color: #333;
+        flex: 1;
+     
+        width: 90px; /* Adjust as needed */
+            
+        
+    }
+    
+    form {
+        display: flex;
+        max-width: 838px;
+        width: 556px;
+        margin-left: 158px;
+        margin-top: -308px;
+    }
+    .credentials, .booking-options {
+        padding: 13px;
+        margin-top: 10px;
+        background-color: #a4ceea;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        max-width: 500px;
+        margin: 6px;
+        margin-top: 6px;
+        margin-left: -43px;
+    }
+    .menu-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        padding: 25px;
+        background-color: #d87676;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        width: 297px;
+        margin: 9px;
+        margin-left: 12px;
+        padding: 20px;
+    }
+    .menu-item1 {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        padding: 25px;
+        background-color: #d87676;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        width: 297px;
+        margin: 9px;
+        margin-left: 12px;
+        padding: 20px;
+      
+    }
+    #cart-total, #summaryContainer {
+        
+            margin-top: 20px;
+            padding: 10px;
+            margin-top: 10px;
+            padding: -26px;
+            background-color: #a4ceea;
+            border-radius: -26px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            width: 277px;
+            margin-left: 31px;
+            margin-top: 239px;
+        
+    }
+    /* Your existing CSS styles */
+    
+    .completed {
+        background-color: #18c24e; /* or any color to indicate completion */
+    }
+    
+/* Facility section styles */
+
+
+.facility-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.facility-item {
+    width: 300px; /* Adjust as needed */
+    height: 270px;
+    background-color: #ffffff;
+    color: #30d82d;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+    margin-bottom: 20px; /* Adjust spacing between items */
+}
+
+.image-box {
+    height: 70%;
+    overflow: hidden;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.content {
+    padding: 20px; /* Adjust padding as needed */
+    text-align: center;
+    font-size: 20px; /* Adjust font size as needed */
+}
+
+.popup {
+    width: 80%;
+    margin-top: -118px;
+    max-width: 600px;
+}
+
+
+
+/* Contact Form styling */
+.contact-form {
+   
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 315px;
+        margin: 41px auto;
+    }
+}
+
+.contact-form h1 {
+    color: #333;
+    margin-bottom: 30px;
+    margin-top: initial;
+}
+
+.contact-form form {
+    display: grid;
+    padding: 74px;
+    margin-top: -87px;
+    grid-gap: 46px;
+    margin-left: -227px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #d25d5d;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 260px;
+    padding: 8px;
+    margin-left: 157px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: #fff;
+    width: 289px;
+    margin-left: 144px;
+    padding: 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* Footer styling */
+footer {
+    background-color: #094f74;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.person-info {
+    text-align: left;
+}
+
+.person-info p {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.social-media ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media li {
+    margin: 0 10px;
+}
+
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    text-size-adjust: auto;
+}
+.social-media i {
+    font-size: 20px;
+}
+}
+
+
+/* 
+@media  only screen and (max-width: 600px) {
+    form {
+        flex-direction: column;
+    }
+
+    .credentials,
+    .booking-options {
+        border: none;
+        padding: 20px;
+    }
+}
+
+.booking-options {
+    padding-left: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    width:300px;
+}
+
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #555;
+}
+.logo img {
+    width: 42px;
+    margin-top: 4px;
+    height: 150%;
+}
+.h1, h1 {
+    font-size: 2.2rem;
+}
+.main-content h1 {
+    opacity: 0;
+    font-size: 49px;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+.main-content h1 {
+    opacity: 0;
+    font-size: 49px;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+.main-content h1 {
+    opacity: 0;
+    font-size: 49px;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 274px;
+} */

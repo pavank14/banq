@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Aditi Banquet Hall</title>
+</head>
+
+<body class="background-image">
+    <header>
+        <div class="logo1">
+            <img src="25.png" alt="Aditi Banquet Hall Logo">
+        </div>
+        <h1>Aditi Banquet Hall</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calender.html">Booking</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+<body class="background-image">
+    
+    <section class="facility-container">
+        <div class="facility-item" onclick="showFacilityPopup('Decoration', 'Somnath Fulare', '989004804', '13 years of experience in decoration.', '100.jpeg', ['gallery1_1.jpg', 'gallery1_2.jpg', 'gallery1_3.jpg'])">
+            <div class="image-box">
+                <img src="36.jpeg" alt="Decoration Image">
+            </div>
+            <div class="content">
+                Decoration
+            </div>
+        </div>
+
+        <div class="facility-item" onclick="showFacilityPopup('Singing', 'Pravin Sutar', '8600555557', '5 years of experience.', '40.jpeg', ['gallery2_1.jpg', 'gallery2_2.jpg', 'gallery2_3.jpg'])">
+            <div class="image-box">
+                <img src="52.jpg" alt="Decoration Image">
+            </div>
+            <div class="content">
+                Singing
+            </div>
+        </div>
+
+        <div class="facility-item" onclick="showFacilityPopup('Caterers', 'Nagnath', '9175477920', '15 years of experience in catering services.', '55.jpg', ['gallery3_1.jpg', 'gallery3_2.jpg', 'gallery3_3.jpg'])">
+            <div class="image-box">
+                <img src="55.jpeg" alt="Decoration Image">
+            </div>
+            <div class="content">
+                Caterers
+            </div>
+        </div>
+    </section>
+
+    <!-- Inside the popup div -->
+    <div class="popup" id="facilityPopup">
+        <span class="close-btn" onclick="closeFacilityPopup()">&times;</span>
+        <h2 id="facilityTitle"></h2>
+        <div id="facilityDetails">
+            <img id="facilityPhoto" src="" alt="Facility Photo" style="max-width: 100%; max-height: 200px; margin-bottom: 10px;">
+            <p><strong>Name:</strong> <span id="facilityName"></span></p>
+            <p><strong>Contact:</strong> <span id="facilityContact"></span></p>
+            <p><strong>Experience:</strong> <span id="facilityExperience"></span></p>
+            <button class="gallery-button" onclick="openFacilityGallery()">View Gallery</button>
+        </div>
+    </div>
+
+    <script>
+        function showFacilityPopup(title, name, contact, experience, photoSrc, galleryImages) {
+            document.getElementById('facilityTitle').textContent = title;
+            document.getElementById('facilityName').textContent = name;
+            document.getElementById('facilityContact').textContent = contact;
+            document.getElementById('facilityExperience').textContent = experience;
+
+            // Set the photo source
+            const facilityPhoto = document.getElementById('facilityPhoto');
+            facilityPhoto.src = photoSrc;
+
+            // Store gallery images in a data attribute
+            facilityPhoto.setAttribute('data-gallery-images', JSON.stringify(galleryImages));
+
+            document.getElementById('facilityPopup').style.display = 'block';
+        }
+
+        function closeFacilityPopup() {
+            document.getElementById('facilityPopup').style.display = 'none';
+        }
+
+        function openFacilityGallery() {
+            const galleryImages = JSON.parse(document.getElementById('facilityPhoto').getAttribute('data-gallery-images'));
+            const title = document.getElementById('facilityTitle').textContent;
+
+            // Navigate to gallery.html with query parameters
+            const galleryUrl = `gallery.html?title=${encodeURIComponent(title)}&images=${encodeURIComponent(JSON.stringify(galleryImages))}`;
+            window.location.href = galleryUrl;
+        }
+    </script>
+</body>
+
+</html>

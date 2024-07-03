@@ -1,0 +1,178 @@
+
+    <section class="menu-container" id="menuContainer">
+        <!-- Menu items -->
+        <div class="menu-item">
+            <div class="item-details">
+                <span class="item-name">खुर्ची </span>
+                <span class="price">Rs. १०.००</span>
+            </div>
+            <div class="item-controls">
+                <label for="quantity1">Quantity:</label>
+                <input type="number" id="quantity1" class="quantity" value="0" min="0" />
+                <span class="total" id="total1">Total: Rs. 0.00</span>
+                <button class="add-to-cart" onclick="addToCart('खुर्ची', 10.00, 'quantity1', 'total1')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <div class="item-details">
+                <span class="item-name">प्लेट</span>
+                <span class="price">Rs. 5.00</span>
+            </div>
+            <div class="item-controls">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" class="quantity" value="0" min="0" />
+                <span class="total" id="total2">Total: Rs. 0.00</span>
+                <button class="add-to-cart" onclick="addToCart('प्लेट', 260.00, 'quantity2', 'total2')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-details">
+                <span class="item-name">खुर्ची कवर </span>
+                <span class="price">Rs. 15.00</span>
+            </div>
+            <div class="item-controls">
+                <label for="quantity3">Quantity:</label>
+                <input type="number" id="quantity3" class="quantity" value="0" min="0" />
+                <span class="total" id="total3">Total: Rs. 0.00</span>
+                <button class="add-to-cart" onclick="addToCart('खुर्ची कवर', 15.00, 'quantity3', 'total3')">Add to Cart</button>
+            </div>
+        </div>
+
+
+
+        <div class="menu-item1">
+            <div class="item-details">
+                <span class="item-name">वाटी  </span>
+                <span class="price">Rs. 3.००</span>
+            </div>
+            <div class="item-controls">
+                <label for="quantity4">Quantity:</label>
+                <input type="number" id="quantity4" class="quantity" value="0" min="0" />
+                <span class="total" id="total4">Total: Rs. 0.00</span>
+                <button class="add-to-cart" onclick="addToCart('वाटी', 3.00, 'quantity4', 'total4')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-details">
+                <span class="item-name">खुर्ची कवर </span>
+                <span class="price">Rs. 15.00</span>
+            </div>
+            <div class="item-controls">
+                <label for="quantity3">Quantity:</label>
+                <input type="number" id="quantity3" class="quantity" value="0" min="0" />
+                <span class="total" id="total3">Total: Rs. 0.00</span>
+                <button class="add-to-cart" onclick="addToCart('खुर्ची कवर', 15.00, 'quantity3', 'total3')">Add to Cart</button>
+            </div>
+        </div>
+
+
+        
+        <div class="menu-item1">
+            <div class="item-details">
+                <span class="item-name"> टेबल  </span>
+                <span class="price">Rs. 50.००</span>
+            </div>
+            <div class="item-controls">
+                <label for="quantity4">Quantity:</label>
+                <input type="number" id="quantity4" class="quantity" value="0" min="0" />
+                <span class="total" id="total4">Total: Rs. 0.00</span>
+                <button class="add-to-cart" onclick="addToCart('वाटी', 3.00, 'quantity4', 'total4')">Add to Cart</button>
+            </div>
+        </div>
+
+           
+    
+        <!-- Add more menu items as needed -->
+    </section>
+
+    <section id="cart">
+        <h2>Shopping Cart</h2>
+        <!-- Display items added to the cart -->
+        <ul id="cartList"></ul>
+        <!-- Display total and checkout button -->
+        <div id="cart-total">
+            <p>Total: <span id="totalPrice">Rs. 0.00</span></p>
+            <button onclick="showSummary()">Show Summary</button>
+        </div>
+    </section>
+    <section class="summary-container" id="summaryContainer" style="display: none;">
+        <h2>Summary</h2>
+        <table id="summaryTable">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="summaryList"></tbody>
+        </table>
+        <p>Total: <span id="summaryTotalPrice">Rs. 0.00</span></p>
+        <button id="proceedButton" onclick="moveToStep3()">Submit</button>
+        <button onclick="printSummaryContent()">Download</button>
+    </section>
+    
+   
+
+
+
+
+
+
+
+    <div class="booking-container" id="bookingContainer">
+        <div class="step" id="step1" onclick="redirectToContainer('formContainer')">
+            <div class="circle circle1 completed">1</div>
+            <div class="line line1"></div>
+        </div>
+        <div class="step" id="step2" onclick="redirectToContainer('menuContainer')">
+            <div class="circle circle2">2</div>
+            <div class="line line2"></div>
+        </div>
+        <div class="step" id="step3" onclick="redirectToContainer('payment')">
+            <div class="circle circle3">3</div>
+        </div>
+    </div>
+    <script>
+
+function submitForm(event) {
+    event.preventDefault();
+    
+    // Hide the booking form container
+    document.getElementById('formContainer').style.display = 'none';
+    
+    // Show the package options
+    document.querySelector('.package-options').style.display = 'block';
+
+    return false;
+}
+
+document.querySelector('.package-options').style.display = 'none'; // Initially hide packages
+
+
+
+
+        function redirectToContainer(containerId) {
+            // Redirect to the specified container
+            document.getElementById(containerId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function submitForm(event) {
+    event.preventDefault();
+    
+    // Add form submission logic here (e.g., form validation, sending data to server)
+
+    // Show package options
+    document.querySelector('.packages').style.display = 'flex';
+
+    // Hide form container
+    document.getElementById('formContainer').style.display = 'none';
+
+    return false;
+}
+
+document.querySelector('.packages').style.display = 'none'; // Initially hide packages
+
+    </script>

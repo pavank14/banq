@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="calander.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="25.png" alt="Aditi Banquet Hall Logo">
+        </div>
+        <h1>Aditi Banquet Hall</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calender.html">Booking</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="calendar-container">
+        <header class="calendar-header">
+            <p class="calendar-current-date"></p>
+            <div class="calendar-navigation">
+                <span id="calendar-prev" class="material-symbols-rounded">&lt;</span>
+                <span id="calendar-next" class="material-symbols-rounded">&gt;</span>
+            </div>
+        </header>
+
+        <div class="calendar-body">
+            <ul class="calendar-weekdays">
+                <li>Sun</li>
+                <li>Mon</li>
+                <li>Tue</li>
+                <li>Wed</li>
+                <li>Thu</li>
+                <li>Fri</li>
+                <li>Sat</li>
+            </ul>
+            <ul class="calendar-dates"></ul>
+        </div>
+        
+        <!-- Form to submit selected date -->
+        <form id="dateForm" action="booking.php" method="post">
+            <input type="hidden" name="selected_date" id="selected_date">
+            <!-- Optional: Add other inputs here if needed -->
+        </form>
+    </div>
+
+    <!-- Include JavaScript for calendar functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let date = new Date();
+            let year = date.getFullYear();
+            let month = date.getMonth();
+
+            const day = document.querySelector(".calendar-dates");
+            const currdate = document.querySelector(".calendar-current-date");
+            const prenexIcons = document.querySelectorAll(".calendar-navigation span");
+
+            const months = [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+
+            const manipulate = () => {
+                let dayone = new Date(year, month, 1).getDay();
+                let lastdate = new Date(year, month + 1, 0).getDate();
+                let dayend = new Date(year, month, lastdate).getDay();
+                let monthlastdate = new Date(year, month, 0).getDate();
+                let lit = "";
+
+                for (let i = dayone; i > 0; i--) {
+                    lit += `<li class="inactive">${monthlastdate - i + 1}</li>`;
+                }
+
+                for (let i = 1; i <= lastdate; i++) {
+                    let isToday = i === date.getDate() && month === new Date().getMonth() && year === new Date().getFullYear() ? "active" : "";
+                    lit += `<li class="${isToday}" data-date="${i}">${i}</li>`;
+                }
+
+                for (let i = dayend; i < 6; i++) {
+                    lit += `<li class="inactive">${i - dayend + 1}</li>`;
+                }
+
+                currdate.innerText = `${months[month]} ${year}`;
+                day.innerHTML = lit;
+
+                // Add event listener to each date for selection
+                const dates = document.querySelectorAll('.calendar-dates li');
+                dates.forEach(date => {
+                    date.addEventListener('click', function () {
+                        const selectedDate = `${year}-${("0" + (month + 1)).slice(-2)}-${("0" + this.dataset.date).slice(-2)}`;
+                        document.getElementById('selected_date').value = selectedDate;
+                        document.getElementById('dateForm').submit();
+                    });
+                });
+            };
+
+            manipulate();
+
+            prenexIcons.forEach(icon => {
+                icon.addEventListener("click", () => {
+                    month = icon.id === "calendar-prev" ? month - 1 : month + 1;
+                    if (month < 0 || month > 11) {
+                        date = new Date(year, month, new Date().getDate());
+                        year = date.getFullYear();
+                        month = date.getMonth();
+                    } else {
+                        date = new Date();
+                    }
+                    manipulate();
+                });
+            });
+        });
+
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to fetch booked dates and update calendar
+            function fetchBookedDates() {
+                fetch('fetch_booked_dates.php')
+                    .then(response => response.json())
+                    .then(data => {
+                        // Assume `data` contains booked dates in an array format
+                        const bookedDates = data.booked_dates;
+
+                        // Update UI to mark booked dates
+                        const calendar = document.getElementById('calendar');
+                        if (calendar) {
+                            bookedDates.forEach(date => {
+                                const dateElement = calendar.querySelector(`[data-date="${date}"]`);
+                                if (dateElement) {
+                                    dateElement.classList.add('booked-date');
+                                }
+                            });
+                        }
+                    })
+                    .catch(error => console.error('Error fetching booked dates:', error));
+            }
+
+            // Call fetchBookedDates() initially on page load
+            fetchBookedDates();
+            
+            // Optionally, refresh booked dates periodically or on demand
+            // Example: setInterval(fetchBookedDates, 30000); // Refresh every 30 seconds
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    
+</body>
+</html>

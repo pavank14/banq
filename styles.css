@@ -1,0 +1,1224 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Set minimum height to cover the entire viewport */
+}
+
+/*..........logo...............*/
+/* Logo styling */
+.logo1 {
+    position: absolute;
+    top: 8px; /* Adjust the top position as needed */
+    left: 10px; /* Adjust the left position as needed */
+}
+.logo {
+    position: absolute;
+    top: 8px; /* Adjust the top position as needed */
+    left: 10px; /* Adjust the left position as needed */
+}
+.logo1 img {
+    width: 80px; /* Adjust the width as needed */
+    height: 160%; /* Maintain aspect ratio */
+}
+
+.logo img {
+    width: 80px; /* Adjust the width as needed */
+    height: 160%; /* Maintain aspect ratio */
+}
+
+header {
+   
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* ... Your existing CSS code ... */
+#photo-container {
+    max-width: 1600px;
+    margin-top: -10px;
+    height: 425px;
+    margin-left: 0px;
+    overflow: hidden;
+}
+
+.carousel-inner img {
+            width: 100%;
+            height: 425px;
+        }
+
+.image {
+    
+    color: #fff; /* Adjust text color for better visibility */
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.calendar{
+    color: #fff;
+    margin: 10px auto;
+    background: #04b6e2;
+    padding: 60px 40px 80px 40px;
+    width: 95%;
+    max-width: 600px;
+    height: 325px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(2,2,2,0.2);
+    position: relative;
+  }
+/* ... Your existing CSS code ... */
+
+.image {
+    margin-top: 10px;
+    text-align: center;
+    
+}
+
+
+
+.main-content {
+    padding: 10px;
+    font-size: x-large;
+    text-align: center;
+    color: blueviolet;
+
+    font-family: math;
+    flex-grow: 1;
+
+   
+    }
+    .main-content h1 {
+        opacity: 0; /* Start with 0 opacity */
+        font-size: 60px;
+        animation: fadeIn 2s ease-in-out forwards; /* Animation duration: 2 seconds */
+
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px); /* Optional: Start slightly above its final position */
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    #map-container {
+        margin-top: 20px;
+    }
+    
+    #map-container iframe {
+        width: 100%;
+        height: 400px; /* Adjust the height as needed */
+        border: 1px solid #c332a1; /* Add a border for better visual separation */
+    }
+    
+    /* ... Your existing CSS code ... */
+    #photo-container {
+        position: relative;
+        overflow: hidden;
+        border: 2px solid #ddd; /* Add a border on all sides */
+        margin: 10px 0; /* Add margin for space between the container and other elements */
+    }
+    
+    .slide-photo {
+        width: 100%;
+        max-width: 500px; /* Adjust the max-width as needed */
+        height: auto;
+        display: inline-block;
+        transition: transform 1s ease-in-out;
+        border-right: 2px solid #ddd; /* Add a right border to separate images */
+        margin-right: 10px; /* Add margin for space between adjacent photos */
+    }
+    
+    /* Specify the maximum height for the image */
+    .slide-photo img {
+        max-height: 100%; /* Adjust the max-height as needed */
+    }
+    
+    
+
+/* ... Your existing CSS code ... */
+
+.gallery {
+    margin-top: 20px;
+    
+}
+
+.gallery h3 {
+    color: #333; /* Change the color as needed */
+}
+
+.gallery figure {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 300px; /* Adjust the max-width as needed */
+    height: auto;
+    border: 1px solid #ddd; /* Add a border for better visual separation */
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+
+.gallery figcaption {
+    margin-top: 10px;
+    color: #555; /* Caption text color */
+}
+
+.key-features {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.left-feature,
+.right-feature {
+    flex: 1;
+}
+
+.left-feature h4,
+.right-feature h4 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.left-feature ul,
+.right-feature ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.left-feature ul li,
+.right-feature ul li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Contact Form styling */
+.contact-form {
+    margin-top: 20px; /* Adjust the top margin as needed */
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    margin: 50px ; /* Center the contact form */
+    margin-left:auto ;
+    margin-right: auto;
+}
+
+.contact-form h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: grid;
+    grid-gap: 10px;
+
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* Right Image styling */
+.right-image {
+    margin-top: 20px; /* Add space between the contact form and the image */
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 20px;
+    HEIGHT:50%;
+
+}
+
+.right-image img {
+    max-width: 100%; /* Make sure the image doesn't exceed its container */
+    border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+}
+
+footer {
+   background-color:#094f74;
+   
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.person-info {
+    text-align: left;
+}
+
+.person-info h4 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.social-media ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media li {
+    margin: 0 10px;
+}
+
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    text-size-adjust: auto;
+}
+
+.social-media i {
+    font-size: 40px;
+}
+
+
+/*..........css for booking ...........*/
+
+
+
+
+
+/* Add responsive styling if needed */
+
+/*.............marrage...................*/
+
+.gallery_1 {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.gallery_1 figure {
+    margin: 10px;
+    text-align: center;
+}
+
+.gallery-photo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-photo:hover {
+    transform: scale(1.1);
+}
+
+.gallery figcaption {
+    margin-top: 10px;
+    color: #555;
+}
+ /* Customize the style as needed */
+ #photo-container {
+    max-width: 1600px;
+    margin-top: -10px;
+    height: 570px;
+    margin-left: 0px;
+    overflow: hidden;
+}
+
+        .carousel-inner img {
+            width: 100%;
+            height: 570px;
+        }
+/*......................contact form...............*/
+
+
+
+/* Apply background styles only to the body with the 'contact-page' class */
+body.contact-page {
+    background-image: url('28.png'); /* Replace '28.png' with the path to your background image */
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Contact Form styling */
+.contact-form {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    margin: 50px auto; /* Center the contact form */
+}
+
+/* ... (Your existing styles) ... */
+
+
+/* Contact Form styling */
+.contact-form {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    margin: 50px auto; /* Center the contact form */
+}
+
+.contact-form h1 {
+    color: #333;
+    margin-bottom: 30px;
+    margin-top: initial;
+}
+
+.contact-form form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #d25d5d;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* Footer styling */
+footer {
+    background-color: #094f74;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.person-info {
+    text-align: left;
+}
+
+.person-info p {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.social-media ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media li {
+    margin: 0 10px;
+}
+
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    text-size-adjust: auto;
+}
+
+.social-media i {
+    font-size: 40px;
+}
+
+/*...............login.........................*/
+
+/* ... Your existing styles ... */
+
+/* Login Modal styling 
+
+            <h2>Login</h2>
+            <form action="#" method="post" onsubmit="handleLogin()">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+    
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+    
+                <button type="submit">Login</button>
+                <p>Don't have an account? <button onclick="openSignUpModal()">Sign Up</button></p>
+        
+                <div class="options">
+                    <a href="#" onclick="forgotPassword()">Forgot Password?</a>
+                    <span>or</span>
+                    <div class="social-logins">
+                        <a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmail.google.com%2Fmail&ec=GAlAFw&hl=en&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-2113536181%3A1706536249754616&theme=glif" onclick="loginWithGoogle()">
+                            <img src="29.png" alt="Google Logo">
+                        </a>
+                        <a href="#" onclick="loginWithTwitter()">
+                            <img src="27.png" alt="Twitter Logo">
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>*/
+.modal {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: auto;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Added box shadow for better visibility */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555; /* Changed color for better visibility */
+}
+
+.modal h2 {
+    text-align: center;
+    color: #333; /* Added color for consistency */
+}
+
+.modal form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.modal label {
+    font-weight: bold;
+    color: #555; /* Changed color for better visibility */
+}
+
+.modal input {
+    width: 100%;
+    padding: 10px; /* Adjusted padding for better input appearance */
+    box-sizing: border-box;
+    border: 1px solid #ddd; /* Added border for better input visibility */
+    border-radius: 5px; /* Added border-radius for a softer look */
+}
+
+.modal button {
+    background-color: #18c24e;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.modal button:hover {
+    background-color: #555;
+}
+
+.options {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.options a {
+    text-decoration: none;
+    color: #555; /* Changed color for better visibility */
+}
+
+.options span {
+    margin: 0 10px;
+    color: #555; /* Changed color for better visibility */
+}
+/* ... Existing CSS code ... */
+
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Ensure the modal is on top of other elements */
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 69px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%; /* Adjusted width to 100% */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-image: url('32.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.options {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333; /* Change the text color as needed */
+}
+
+.options span {
+    color: #555;
+    margin: 10px 0;
+}
+
+.social-logins {
+    display: flex;
+    margin-top: 10px; /* Adjust the top margin as needed */
+}
+
+.social-logins a {
+    margin: 0 10px;
+}
+
+.social-logins img {
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    cursor: pointer;
+}
+
+form p {
+    color: #777; /* Change the text color as needed */
+    margin-top: 40px; /* Adjust the top margin as needed */
+}
+
+form button {
+    background-color: #3498db; /* Change the button color as needed */
+    color: #fff; /* Change the text color as needed */
+    padding: 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+form button:hover {
+    background-color: #2980b9; /* Change the button color on hover as needed */
+}
+
+/* ... Existing CSS code ... */
+/* Your existing styles */
+
+/* Booking Phases styling */
+.booking-phases {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.phase {
+    text-align: center;
+    color: #555;
+}
+
+.phase span {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Additional styling for active phase */
+.phase.active {
+    color: #18c24e; /* Adjust the color for the active phase */
+}
+
+/* Your existing styles */
+
+
+.progress-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.node {
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.completed {
+    background-color: #18c24e; /* or any color to indicate completion */
+}
+
+.line {
+    height: 2px;
+    width: 217px; /* Adjust the length of the line as needed */
+    background-color: #ddd;
+}
+
+.booking-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #555;
+}
+/*.............. booking facitiy........*/
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #094f74;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.booking-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh; /* Adjusted height to center at the top */
+}
+
+.step {
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.line {
+    height: 2px;
+    background-color: #333;
+    flex: 1;
+}
+
+
+/* Your existing CSS styles */
+
+.completed {
+    background-color: #18c24e; /* or any color to indicate completion */
+}
+
+/* Add this CSS to your styles.css file or in a style block within the HTML */
+/* Add this CSS to your existing styles.css or create a new one */
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 10px;
+    padding: 25px;
+    background-color:#d87676;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 500px;
+    margin: 10px;
+    margin-left: 200px;
+    padding: 20px;
+}
+
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-controls {
+    display: flex;
+    flex-direction: column;
+}
+
+.quantity,
+.add-to-cart {
+    margin-top: 5px;
+}
+#cart,
+#summaryContainer {
+    text-align: center;
+
+}
+#cart {
+    background-color: #3498db; /* Set your desired background color */
+    padding: 20px; /* Add padding for better visual appeal */
+    border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+    transition: background-color 0.3s ease; /* Add smooth transition effect */
+}
+
+#cart:hover {
+    background-color: #2980b9; /* Set a different color on hover */
+}
+
+#cartList,
+#summaryList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cartList li,
+#summaryList li {
+    margin-bottom: 10px;
+}
+
+#cart-total,
+#summaryContainer {
+    margin-top: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #a4ceea;
+    border-radius: -26px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 716px;
+    margin-left: 313px;
+    margin-top: 219px;
+}
+    
+
+
+#cart-total button,
+#summaryContainer button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    margin-top: 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#cart-total button:hover,
+#summaryContainer button:hover {
+    background-color: #45a049;
+}
+
+#cart-total p,
+#summaryContainer p {
+    margin: 0;
+}
+/* Add this CSS to your existing styles.css or create a new one */
+
+.menu-item1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding: 20px;
+    background-color: #d87676;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 500px;
+    margin: 10px;
+    margin-left: 800px;
+    margin-top: -198px;
+}
+
+.menu-item1 .item-details,
+.menu-item1 .item-controls {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+}
+.menu-item2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding: 20px;
+    background-color: #d87676;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 500px;
+    margin: 10px;
+    margin-left: 800px;
+    margin-top: -198px;
+}
+
+.menu-item2 .item-details,
+.menu-item2 .item-controls {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+}
+/* Add this CSS to your existing styles.css or create a new one */
+
+/* Style for the date selection container */
+.date-selection-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+/* Style for the form inside the date selection container */
+#date-selection-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style for the label */
+label {
+    margin-bottom: 10px;
+}
+
+/* Style for the input[type="date"] */
+input[type="date"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style for the submit button */
+button {
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+    /*...............................*/
+
+
+
+    #calendar-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-family: "Baloo";
+        padding-top: 60px;
+    }
+    
+    #calender-wrapper {
+        position: relative;
+        border: 6px solid #FF6B6B;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 20px; /* Adjust the margin as needed */
+    }
+    
+    #calender-content .calendar__item {
+        cursor: pointer;
+        padding: .5em .75em;
+        border: 1px solid #ccc; /* Add a border to each date */
+        margin: 5px; /* Add some margin between dates */
+    }
+    
+    #calender-content .calendar__item:hover {
+        background-color: #e0e0e0; /* Change background color on hover */
+    }
+    /*.......faility........*/
+   
+/* Your existing styles go here */
+
+/* Facility section styles */z
+.facility-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.facility-item {
+    width: 150px;
+    background-color: #158924;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+/* Facility section styles */
+.facility-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.facility-item {
+    width: 300px;
+    background-color: #158924;
+    color: #fff;
+    padding: z;
+    cursor: pointer;
+    height: 270px;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.facility-item:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Popup styles (similar to the previous example) */
+.facility-item {
+    position: relative;
+    width: 300px;
+    height: 270px;
+    background-color: #ffffff;
+    color: #30d82d;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.image-box {
+    height: 70%;
+    overflow: hidden;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.content {
+    padding: 50px;
+    text-align: center;
+    font-size:25px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.details {
+    font-size: 0.9rem;
+}
+
+
+#facilityPopup h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#facilityPopup p {
+    color: #555;
+}
+
+#facilityPopup span {
+    color: #6352d4;
+    font-weight: bold;
+}
+.popup {
+    /* ... existing styles ... */
+    display: none;
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.popup img {
+    display: block;
+    margin: 0 auto;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 60px;
+}
+
+.popup h2, .popup p {
+    margin: 0;
+    padding-left: 10px; /* Adjust this value for left spacing */
+}
+.popup {
+    /* ... existing styles ... */
+    width: 80%; /* Adjust the width as needed */
+    max-width: 600px; /* Set a maximum width if necessary */
+}
+
+.popup-content {
+    display: flex;
+}
+
+.popup img {
+    display: block;
+    margin: 0 auto;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 50px;
+}
+
+.text-content {
+    padding: 70px;
+}
+
+.text-content p#decorationExperience {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.gallery-button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #007BFF; /* Different color for the gallery button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.gallery-button:hover {
+    background-color: #0056b3; /* Hover color for the gallery button */
+}
+/* Your existing CSS styles go here */
+/* ................payment.......... */
